@@ -33,6 +33,10 @@ cursor.execute('''
         WHERE grades.grade IS NOT NULL;
 
 ''')
+def get_from_view():
+   cursor.execute("SELECT * FROM my_view")
+   for row in cursor.fetchall():
+       print(row)
 
 
 def add_user(name: str, age: int):
